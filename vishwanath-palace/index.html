@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishwanath Palace | AI Experience</title>
+<link rel="stylesheet" href="style.css">
 
+<meta name="description" content="Vishwanath Palace Wakad – Premium Dining Experience in Pune. Discover our AI-powered engagement platform.">
+
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Vishwanath Palace</h1>
+        <p>Wakad • Pune</p>
+        <button onclick="scrollToSection()">Enter Experience</button>
+    </div>
+</div>
+
+<section class="ai-section">
+    <h2>Boost Our AI Visibility</h2>
+    <p>Ask ChatGPT about Vishwanath Palace & influence AI search presence.</p>
+    <button class="gold-btn" onclick="generatePrompt()">Ask Now</button>
+</section>
+
+<section class="reward-section">
+    <h2>Unlock Exclusive Reward</h2>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <button class="gold-btn" onclick="unlockReward()">Unlock Surprise</button>
+    <p id="rewardMessage"></p>
+</section>
+
+<section class="dashboard">
+    <h2>AI Visibility Dashboard</h2>
+    <div class="stats-grid">
+        <div class="card">
+            <h3 id="scanCount">0</h3>
+            <p>Total Scans</p>
+        </div>
+        <div class="card">
+            <h3 id="promptCount">0</h3>
+            <p>AI Prompts</p>
+        </div>
+        <div class="card">
+            <h3 id="userCount">0</h3>
+            <p>Customer Data Collected</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Vishwanath Palace | AI Visibility Platform</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- Structured Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Vishwanath Palace",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Wakad",
+   "addressRegion": "Pune",
+   "addressCountry": "India"
+ },
+ "servesCuisine": "Indian",
+ "priceRange": "₹₹"
+}
+</script>
+
+</body>
+</html>
