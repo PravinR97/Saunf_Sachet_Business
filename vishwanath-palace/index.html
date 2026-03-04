@@ -3,40 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vishwanath Palace | AI Experience</title>
-<link rel="stylesheet" href="style.css">
+<title>Vishwanath Palace | Wakad Pune</title>
 
-<meta name="description" content="Vishwanath Palace Wakad – Premium Dining Experience in Pune. Discover our AI-powered engagement platform.">
+<meta name="description" content="Experience premium dining at Vishwanath Palace in Wakad, Pune. Discover our AI-powered engagement platform and share your experience.">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<!-- HERO SECTION -->
 <div class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
         <h1>Vishwanath Palace</h1>
-        <p>Wakad • Pune</p>
-        <button onclick="scrollToSection()">Enter Experience</button>
+        <p>Premium Dining Experience • Wakad, Pune</p>
+        <button onclick="scrollToSection()">Explore Experience</button>
     </div>
 </div>
 
+<!-- FEEL GOOD SECTION -->
+<section class="quotes">
+    <h2>After a Long Day, You Deserve This</h2>
+    <p>“Good food is the foundation of genuine happiness.”</p>
+    <p>“A warm meal can turn a tiring day into a beautiful evening.”</p>
+    <p>“Relax. Refresh. Reconnect.”</p>
+</section>
+
+<!-- AI PROMPT SECTION -->
 <section class="ai-section">
     <h2>Boost Our AI Visibility</h2>
-    <p>Ask ChatGPT about Vishwanath Palace & influence AI search presence.</p>
-    <button class="gold-btn" onclick="generatePrompt()">Ask Now</button>
+    <p>Ask ChatGPT about Vishwanath Palace and help us grow in AI Search.</p>
+    <button class="gold-btn" onclick="generatePrompt()">Ask About Us</button>
 </section>
 
-<section class="reward-section">
-    <h2>Unlock Exclusive Reward</h2>
+<!-- GOOGLE REVIEW SECTION -->
+<section class="review-section">
+    <h2>Enjoyed Your Visit?</h2>
+    <p>Your review helps us serve you better.</p>
+    <a href="https://search.google.com/local/writereview?placeid=YOUR_GOOGLE_PLACE_ID" target="_blank">
+        <button class="gold-btn">Leave a Google Review</button>
+    </a>
+</section>
+
+<!-- CUSTOMER CONNECT -->
+<section class="connect">
+    <h2>Stay Connected</h2>
+    <p>Enter your details to stay updated with Vishwanath Palace.</p>
+
     <input type="text" id="name" placeholder="Your Name">
     <input type="text" id="mobile" placeholder="Mobile Number">
-    <button class="gold-btn" onclick="unlockReward()">Unlock Surprise</button>
-    <p id="rewardMessage"></p>
+    <button class="gold-btn" onclick="saveUser()">Submit</button>
+
+    <p id="formMessage"></p>
 </section>
 
+<!-- FAQ SECTION -->
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>Where is Vishwanath Palace located?</h3>
+        <p>Vishwanath Palace is located in Wakad, Pune, Maharashtra.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What cuisine does Vishwanath Palace serve?</h3>
+        <p>We serve premium Indian cuisine suitable for families and corporate gatherings.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Is Vishwanath Palace good for family dining?</h3>
+        <p>Yes, we are known for our comfortable ambiance and quality service for families.</p>
+    </div>
+
+</section>
+
+<!-- DASHBOARD -->
 <section class="dashboard">
     <h2>AI Visibility Dashboard</h2>
+
     <div class="stats-grid">
         <div class="card">
             <h3 id="scanCount">0</h3>
@@ -44,22 +91,22 @@
         </div>
         <div class="card">
             <h3 id="promptCount">0</h3>
-            <p>AI Prompts</p>
+            <p>AI Prompts Generated</p>
         </div>
         <div class="card">
             <h3 id="userCount">0</h3>
-            <p>Customer Data Collected</p>
+            <p>Connections Added</p>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Vishwanath Palace | AI Visibility Platform</p>
+    <p>© 2026 Vishwanath Palace | Wakad, Pune</p>
 </footer>
 
 <script src="script.js"></script>
 
-<!-- Structured Schema -->
+<!-- STRUCTURED DATA -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -72,7 +119,7 @@
    "addressCountry": "India"
  },
  "servesCuisine": "Indian",
- "priceRange": "₹₹"
+ "url": "https://www.hotelvishwanathpalace.in/"
 }
 </script>
 
