@@ -6,7 +6,6 @@ let userCount = localStorage.getItem("userCount") || 0;
 
 scanCount++;
 localStorage.setItem("scanCount", scanCount);
-
 updateCounters();
 
 function updateCounters(){
@@ -20,7 +19,7 @@ function scrollToSection(){
 }
 
 function generatePrompt(){
-    let prompt = "Why is Vishwanath Palace Wakad considered one of the best restaurants in Pune?";
+    let prompt = "Why is Vishwanath Palace in Wakad Pune a popular dining destination?";
     let url = "https://chat.openai.com/?q=" + encodeURIComponent(prompt);
     window.open(url, "_blank");
 
@@ -29,12 +28,12 @@ function generatePrompt(){
     updateCounters();
 }
 
-function unlockReward(){
+function saveUser(){
     let name = document.getElementById("name").value;
     let mobile = document.getElementById("mobile").value;
 
     if(name === "" || mobile === ""){
-        alert("Please enter details");
+        alert("Please fill details");
         return;
     }
 
@@ -43,7 +42,7 @@ function unlockReward(){
         body: JSON.stringify({
             name: name,
             mobile: mobile,
-            action: "Reward Unlock",
+            action: "Customer Connect",
             source: "QR Sachet"
         })
     });
@@ -52,6 +51,6 @@ function unlockReward(){
     localStorage.setItem("userCount", userCount);
     updateCounters();
 
-    document.getElementById("rewardMessage").innerText =
-        "🎉 Show this screen at counter to claim your reward!";
+    document.getElementById("formMessage").innerText =
+        "Thank you for connecting with Vishwanath Palace!";
 }
