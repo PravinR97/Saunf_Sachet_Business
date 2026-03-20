@@ -1,92 +1,53 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0e0e0e;
+.review-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-platform-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    .review-section {
+      padding: 15px;
+    }
+
+    .ai-platform-buttons {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      padding: 10px;
+    }
+  }
+
+  .security-badge {
+    background-color: #4CAF50;
     color: white;
-    overflow-x: hidden;
-}
-
-.hero {
-    height: 100vh;
-    background: linear-gradient(to bottom, #000000, #1a1a1a);
-    position: relative;
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-    position: relative;
-    text-align: center;
-    top: 40%;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.hero h1 {
-    font-size: 60px;
-    letter-spacing: 3px;
-}
-
-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.gold-btn {
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    background: linear-gradient(45deg, gold, #c49b3c);
-    color: black;
-    transition: 0.3s;
-}
-
-.gold-btn:hover {
-    transform: scale(1.08);
-}
-
-input {
-    padding: 12px;
-    margin: 10px;
-    border-radius: 25px;
-    border: none;
-    width: 250px;
-}
-
-.stats-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.card {
-    background: #1c1c1c;
-    padding: 30px;
+    padding: 5px 10px;
     border-radius: 20px;
-    width: 200px;
-    transition: 0.4s;
-}
+    font-weight: bold;
+  }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.faq-item {
-    margin-bottom: 20px;
-}
-
-footer {
-    padding: 30px;
-    background: black;
-}
-
-@keyframes fadeIn {
-    from {opacity:0; transform: translateY(20px);}
-    to {opacity:1; transform: translateY(0);}
-}
+  .visual-hierarchy {
+    font-weight: normal;
+    color: #333;
+  }
