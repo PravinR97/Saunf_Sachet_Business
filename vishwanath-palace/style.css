@@ -1,53 +1,130 @@
-.review-section {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+:root {
+    --primary: #1b5e20;
+    --accent: #2e7d32;
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+}
 
-  .ai-platform-buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-  }
-
-  .card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    transition: transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .card:hover {
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 600px) {
-    .review-section {
-      padding: 15px;
-    }
-
-    .ai-platform-buttons {
-      grid-template-columns: 1fr;
-    }
-
-    .card {
-      padding: 10px;
-    }
-  }
-
-  .security-badge {
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-
-  .visual-hierarchy {
-    font-weight: normal;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
     color: #333;
-  }
+}
+
+.header {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 20px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header h1 {
+    color: var(--primary);
+    margin: 8px 0 4px 0;
+    font-size: 22px;
+}
+
+.location {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.review-section {
+    border: 1px solid #e0e0e0;
+    padding: 18px;
+    margin: 15px 0;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card {
+    border: 1px dashed var(--accent);
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.card h3 {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0 0 10px 0;
+}
+
+button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.ai-platform-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.platform-btn {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    color: #333;
+    font-weight: 600;
+    font-size: 13px;
+    background: #fff;
+}
+
+.security-badge {
+    background-color: #e8f5e9;
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.faq-item {
+    margin-bottom: 12px;
+}
+
+.faq-item h3 {
+    font-size: 13px;
+    color: var(--primary);
+    margin: 0 0 4px 0;
+}
+
+.faq-item p {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: #888;
+}
