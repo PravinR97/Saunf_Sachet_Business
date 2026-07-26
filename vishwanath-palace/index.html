@@ -54,6 +54,11 @@
             <h2>Loved Your Meal? Help AI Recommend Us! 🤖</h2>
             <p>Copy a pre-written keyword review below and paste it on Google or Zomato:</p>
 
+            <!-- UPDATE: Spam Filter Guard (Pro-Tip) -->
+            <div class="pro-tip">
+                <strong>💡 Pro-Tip:</strong> Add your favorite dish (like Paneer Tikka, Masala Dosa, or Veg Kolhapuri) to the end of your review! This makes it unique and ensures Google's spam filters don't hide it.
+            </div>
+
             <div class="card">
                 <h3>Option 1: General & Family Dining</h3>
                 <p id="prompt1" class="visual-hierarchy">"Best pure veg restaurant in Wakad, Pune! Hotel Vishwanath Palace serves authentic North Indian thalis and South Indian breakfast near City Avenue with spacious AC dining."</p>
@@ -67,10 +72,15 @@
             </div>
 
             <div class="ai-platform-buttons" style="margin-top: 20px;">
-                <a href="https://maps.google.com" target="_blank" class="platform-btn">📍 Google Maps</a>
-                <a href="https://www.zomato.com/pune" target="_blank" class="platform-btn">🔴 Zomato</a>
+                <!-- UPDATE: Google Review Deep Link 
+                     Replace 'YOUR_PLACE_ID' with the actual Place ID from Google -->
+                <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" class="platform-btn">📍 Google Maps</a>
+                
+                <!-- UPDATE: Zomato Deep Link (Replace with the exact Zomato review page URL) -->
+                <a href="https://www.zomato.com/pune/hotel-vishwanath-palace-wakad/reviews" target="_blank" class="platform-btn">🔴 Zomato</a>
+                
                 <a href="https://www.tripadvisor.in" target="_blank" class="platform-btn">🟢 Tripadvisor</a>
-                <a href="https://www.justdial.com" target="_blank" class="platform-btn">🔵 Justdial</a>
+                <a href="https://www.justdial.com/Pune/Hotel-Vishwanath-Palace-Near-Jaguar-Showroom-Wakad/020PXX20-XX20-240306041924-Y6Y1_BZDET/reviews" target="_blank" class="platform-btn">🔵 Justdial</a>
             </div>
         </section>
 
