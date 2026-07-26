@@ -6,7 +6,8 @@ function copyPrompt(elementId) {
     const reviewText = textElement.innerText;
 
     navigator.clipboard.writeText(reviewText).then(() => {
-        alert("Review text copied! Now select Google Maps or Zomato below and paste it in your review.");
+        // Updated alert text to match the deep link workflow
+        alert("Review text copied! Now select a platform below. Don't forget to paste the text and add your favorite dish at the end!");
     }).catch(err => {
         console.error("Failed to copy text: ", err);
     });
