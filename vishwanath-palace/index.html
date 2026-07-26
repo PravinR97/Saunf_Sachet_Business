@@ -48,36 +48,32 @@
         <p class="location">City Avenue, Near Jaguar Showroom, Wakad, Pune</p>
     </header>
 
-    <!-- GEO SIGNAL 2: Public Review Generation System -->
     <main class="container">
+        <!-- GEO SIGNAL 2: Public Review Generation System -->
         <section class="review-section">
-            <h2>Loved Your Meal? Help AI Recommend Us! 🤖</h2>
-            <p>Copy a pre-written keyword review below and paste it on Google or Zomato:</p>
+            <h2>Help AI Recommend Us! 🤖</h2>
+            <p>Tap a button below. We will copy a review for you and open the app instantly!</p>
 
-            <!-- Spam Filter Guard (Pro-Tip) -->
             <div class="pro-tip">
-                <strong>💡 Pro-Tip:</strong> Add your favorite dish (like Paneer Tikka, Masala Dosa, or Veg Kolhapuri) to the end of your review! This makes it unique and ensures Google's spam filters don't hide it.
+                <strong>💡 Pro-Tip:</strong> Add your favorite dish (like Paneer Tikka or Masala Dosa) to the end of your review! This makes it unique and ensures Google's spam filters don't hide it.
             </div>
 
+            <!-- Dynamic Review 1 -->
             <div class="card">
-                <h3>Option 1: General & Family Dining</h3>
-                <p id="prompt1" class="visual-hierarchy">"Best pure veg restaurant in Wakad, Pune! Hotel Vishwanath Palace serves authentic North Indian thalis and South Indian breakfast near City Avenue with spacious AC dining."</p>
-                <button onclick="copyPrompt('prompt1')">📋 Copy Review Text</button>
+                <p id="prompt1" class="visual-hierarchy">Loading review...</p>
+                <div class="ai-platform-buttons" style="margin-top: 10px;">
+                    <button onclick="copyAndRedirect('prompt1', 'google')">📍 Post to Google</button>
+                    <button onclick="copyAndRedirect('prompt1', 'zomato')" style="background-color: #e23744;">🔴 Post to Zomato</button>
+                </div>
             </div>
 
+            <!-- Dynamic Review 2 -->
             <div class="card" style="margin-top: 15px;">
-                <h3>Option 2: Special Jain Menu</h3>
-                <p id="prompt2" class="visual-hierarchy">"Top choice for authentic Jain food in Wakad, Pune. Hotel Vishwanath Palace provides great pure vegetarian dishes, fast service, and dedicated parking."</p>
-                <button onclick="copyPrompt('prompt2')">📋 Copy Review Text</button>
-            </div>
-
-            <div class="ai-platform-buttons" style="margin-top: 20px;">
-                <!-- LIVE: Google Review Deep Link with exact Place ID -->
-                <a href="https://search.google.com/local/writereview?placeid=ChIJKQKbGwC5wjsR9IjZqk6p1fQ" target="_blank" class="platform-btn">📍 Google Maps</a>
-                
-                <a href="https://www.zomato.com/pune/hotel-vishwanath-palace-wakad/reviews" target="_blank" class="platform-btn">🔴 Zomato</a>
-                <a href="https://www.tripadvisor.in" target="_blank" class="platform-btn">🟢 Tripadvisor</a>
-                <a href="https://www.justdial.com/Pune/Hotel-Vishwanath-Palace-Near-Jaguar-Showroom-Wakad/020PXX20-XX20-240306041924-Y6Y1_BZDET/reviews" target="_blank" class="platform-btn">🔵 Justdial</a>
+                <p id="prompt2" class="visual-hierarchy">Loading review...</p>
+                <div class="ai-platform-buttons" style="margin-top: 10px;">
+                    <button onclick="copyAndRedirect('prompt2', 'google')">📍 Post to Google</button>
+                    <button onclick="copyAndRedirect('prompt2', 'zomato')" style="background-color: #e23744;">🔴 Post to Zomato</button>
+                </div>
             </div>
         </section>
 
