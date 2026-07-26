@@ -47,6 +47,18 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* NEW: Spam Filter Guard CSS */
+.pro-tip {
+    background-color: #fff8e1;
+    color: #f57f17;
+    border-left: 4px solid #fbc02d;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
 .card {
     border: 1px dashed var(--accent);
     background-color: #fafafa;
