@@ -18,7 +18,7 @@ window.onload = function() {
     document.getElementById('prompt2').innerText = shuffled[1];
 };
 
-// 3. One-Click Copy & Redirect Logic
+// 3. One-Click Copy, Redirect & Analytics Tracking Logic
 function copyAndRedirect(elementId, platform) {
     const reviewText = document.getElementById(elementId).innerText;
     
@@ -27,6 +27,15 @@ function copyAndRedirect(elementId, platform) {
         google: "https://search.google.com/local/writereview?placeid=ChIJKQKbGwC5wjsR9IjZqk6p1fQ",
         zomato: "https://www.zomato.com/pune/hotel-vishwanath-palace-wakad/reviews"
     };
+
+    // TRACKING: Send the button click event to Google Analytics
+    if (typeof gtag === 'function') {
+        gtag('event', 'review_button_clicked', {
+            'event_category': 'Engagement',
+            'event_label': platform, // This logs whether they clicked 'google' or 'zomato'
+            'value': 1
+        });
+    }
 
     // Copy to clipboard
     navigator.clipboard.writeText(reviewText).then(() => {
