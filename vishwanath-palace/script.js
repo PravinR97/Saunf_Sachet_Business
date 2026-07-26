@@ -1,37 +1,20 @@
-// Secure Email Review Handling
-function handleEmailReview(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        throw new Error('Invalid email format');
-    }
-    // Process email safely
+// Copy Prompt Functionality for Review Booster
+function copyPrompt(elementId) {
+    const textElement = document.getElementById(elementId);
+    if (!textElement) return;
+
+    const reviewText = textElement.innerText;
+
+    navigator.clipboard.writeText(reviewText).then(() => {
+        alert("Review text copied! Now select Google Maps or Zomato below and paste it in your review.");
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+    });
 }
 
-// AI Platform Integrations
-async function callChatGPT(data) {
-    // Implementation for ChatGPT API integration
-}
-async function callClaude(data) {
-    // Implementation for Claude API integration
-}
-async function callGemini(data) {
-    // Implementation for Gemini API integration
-}
-async function callPerplexity(data) {
-    // Implementation for Perplexity API integration
-}
-async function callGrok(data) {
-    // Implementation for Grok API integration
-}
-
-// Input Validation
-function validateInput(input) {
-    // Perform input validation checks
-    return sanitizedInput;
-}
-
-// XSS Prevention
+// Input Sanitation Utility (XSS Prevention)
 function escapeHtml(unsafe) {
+    if (typeof unsafe !== 'string') return '';
     return unsafe.replace(/[&<>"']/g, function (match) {
         return {
             '&': '&amp;',
@@ -41,26 +24,4 @@ function escapeHtml(unsafe) {
             "'": '&#039;'
         }[match];
     });
-}
-
-// Secure Data Transmission with Error Handling
-async function secureDataTransmission(url, data) {
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return await response.json();
-    } catch (error) {
-        console.error('Data transmission error:', error);
-    }
-}
-
-// Analytics Tracking
-function trackEvent(event) {
-    // Code to send event data to analytics service
 }
